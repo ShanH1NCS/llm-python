@@ -7,9 +7,15 @@ ARG OLLAMA_API_KEY
 WORKDIR /app
 
 # Install system dependencies
+# RUN apt-get update && apt-get install -y \
+#     curl \
+#     && rm -rf /var/lib/apt/lists/*
 RUN apt-get update && apt-get install -y \
     curl \
+    ca-certificates \
+    zstd \
     && rm -rf /var/lib/apt/lists/*
+
 
 # Install Ollama
 RUN curl -fsSL https://ollama.com/install.sh | sh
