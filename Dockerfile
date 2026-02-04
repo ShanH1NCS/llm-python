@@ -34,7 +34,7 @@ ENV PYTHONUNBUFFERED=1 \
 RUN echo '#!/bin/bash\n\
 ollama serve &\n\
 sleep 5\n\
-ollama pull gemma3:4b\n\
+ollama pull gemma2:2b\n\
 exec python -m uvicorn main:app --host 0.0.0.0 --port 8000' > /app/start.sh && \
     chmod +x /app/start.sh
 
