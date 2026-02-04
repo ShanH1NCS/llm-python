@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  PYTHON_VERSION: '3.12.5'
+  PYTHON_VERSION: '3.10.5'
   OLLAMA_MODEL: 'gemma3:4b'
   DOCKER_IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/backend-app
   OLLAMA_API_KEY: ${{ secrets.OLLAMA_API_KEY }}
